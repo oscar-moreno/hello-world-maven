@@ -32,7 +32,7 @@ pipeline {
     }
     stage("Deploy"){
       steps{
-        echo "Deploy app“
+        echo 'Deploy app'
       }
     }
   }
