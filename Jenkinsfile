@@ -7,7 +7,7 @@ pipeline {
       steps {
         echo 'Build started'
         withMaven(maven: 'maven-latest') {
-          bat "mvn clean install"
+          sh "mvn clean install"
         }
         echo 'Build finished'
       }
@@ -17,7 +17,7 @@ pipeline {
         echo 'Code analysis with SonarQube started'
         withSonarQubeEnv('sonarqube-local-lts') {
           withMaven(maven: 'maven-latest') {
-            bat "mvn sonar:sonar"
+            sh "mvn sonar:sonar"
           }
         echo 'Code analysis with SonarQube finished'
         }
