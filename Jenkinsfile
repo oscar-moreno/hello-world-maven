@@ -6,9 +6,7 @@ pipeline {
     stage('Build') {
       steps {
         echo 'Build started'
-        withMaven(maven: 'maven-latest') {
-          sh "mvn clean install"
-        }
+        sh "mvn clean install"
         echo 'Build finished'
       }
     }
@@ -16,9 +14,7 @@ pipeline {
       steps {
         echo 'Code analysis with SonarQube started'
         withSonarQubeEnv('sonarqube-local-lts') {
-          withMaven(maven: 'maven-latest') {
-            sh "mvn sonar:sonar"
-          }
+          sh "mvn sonar:sonar"
         echo 'Code analysis with SonarQube finished'
         }
       }
