@@ -7,12 +7,8 @@ package es.excentia;
 public class App 
 {
     public static void main( String[] args ) {
-        
-        int result = 10 / 0;
-        String password="My password";
-        String string1="My password";
-        String string2="My password";
-        String string3="My password";
+        String string = "Hello World";
+        System.out.println(string);
     }
 
     public static int getLucky() {
