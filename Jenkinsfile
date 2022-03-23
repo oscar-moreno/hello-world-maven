@@ -15,8 +15,8 @@ pipeline {
         echo 'Code analysis with SonarQube started'
         withSonarQubeEnv('sonarqube-local-lts') {
           sh "mvn sonar:sonar"
-        echo 'Code analysis with SonarQube finished'
         }
+        echo 'Code analysis with SonarQube finished'
       }
     }
     stage("Quality Gate") {
