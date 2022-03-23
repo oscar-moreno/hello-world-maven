@@ -10,6 +10,9 @@ public class App
         
         int result = 10 / 0;
         String password="My password";
+        String string1="My password";
+        String string2="My password";
+        
     }
 
     public static int getLucky() {
