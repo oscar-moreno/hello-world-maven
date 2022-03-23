@@ -13,7 +13,7 @@ pipeline {
     stage('Code Analysis') {
       steps {
         echo 'Code analysis with SonarQube started'
-        withSonarQubeEnv('sonarqube-local-lts') {
+        withSonarQubeEnv('sonarqube-local-training-lts') {
           sh "mvn sonar:sonar"
         }
         echo 'Code analysis with SonarQube finished'
